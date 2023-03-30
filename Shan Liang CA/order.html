@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Order online</title> 
+		<!--link CSS file with html page-->
+		<link rel="stylesheet" href="style.css">
+	</head>	
+	<body id="orderbody">
+		<h2 class="header center">Order</h2>
+		<form class="form"><!--Table has been created inside of form to keep tidy the form-->
+			<table class="table">
+				<tr>
+					<td>User name<sup>*</sup></td>
+				</tr>
+				<tr>
+					<!--Placeholder used to give instructions, and required used to make sure it can't be skipped-->
+					<td><input type="text" name="username" placeholder="please enter your user name" required="required" class="textarea"></td>
+				</tr>
+				<tr>
+					<td>Password<sup>*</sup>(9 digits)</td>
+				</tr>
+				<tr>
+					<!--Set the password length 9 digits and covered by "*"-->
+					<td><input type="password" name="password" placeholder="please enter your password" required="required" minlength="9" maxlength="9" class="textarea"></td>
+				</tr>
+				<tr>
+					<td>Size<sup>*</sup></td>
+				</tr>
+				<tr>
+					<td>
+						<!--A drop down menu with 3 options and a placeholder option-->
+						<!--Javascript and JQuery used to pop up the alert-->
+						<select name="size" required="required" id="selectSize" onchange="myAlert()" class="textarea">
+							<option value="" disabled selected>Please choose the size</option>
+							<option value="Large"> 6oz Large €7</option>
+							<option value="Extra-Large" > 10oz Extra-Large €9</option>
+							<option value="Supersize" >16oz Supersize €17.50</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>The number of burgers<sup>*</sup></td>
+				</tr>
+				<tr>
+					<!--Set the type "number" and it starts from 1-->
+					<td><input type="number"  min="1" name="number" placeholder="please enter the number of burgers you want" required="required" class="textarea"></td>
+				</tr>
+				<tr>
+					<!--Javascript used to check discount code-->
+					<td>Discount code <button type="button" onclick="checkDiscount()" class="redeem"> Redeem</button> </td>
+				</tr>
+				<tr>
+					<td><input type="text" name="discountcode" id="myInput" class="textarea"></td>
+				</tr>
+				<tr>
+					<!--Set the submit button, name it "checkout"-->
+					<td class="center">*required<br /><input type="submit" value="CHECKOUT" class="submit"></td>
+				</tr>							
+			
+			</table>
+		</form>
+		<!--link JavaScript file with html page-->
+		<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+		<script src="script.js"  ></script>
+	</body>
+</html>

@@ -1,0 +1,139 @@
+/* remove margin and padding for all pages */
+* {
+    margin: 0;
+    padding: 0;
+	box-sizing: border-box;
+}
+
+/*------------------------- CSS for index.html -------------------------*/
+/* insert wowburger image to the page as the background, and make it responsive */
+.backgroundpic{
+	background-image:url('images/wowburger.jpg');
+	background-position: center center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* put order image in the middle of the page, and make a shadow for it */
+.orderonline{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1.0;
+}
+
+/* when the cursor hovers over order.jpg, a border shows up */
+.orderonline:hover{
+    box-shadow: 3px 3px #ffff00;
+}
+
+/*------------------------- CSS for menu.html -------------------------*/
+/* change the header color and put the image in the middle */
+.header{
+  background-color: #f4f3ef;
+  text-align: center;
+  padding: 30px;
+}
+
+/* keep elements in the middle of the page */
+.center{
+	text-align: center;
+}
+
+/*------------------------- CSS for order.html -------------------------*/
+/* Set the background color and font style for the order page*/
+#orderbody{
+	background-color: #f4f3ef;
+	font-family: "Comic Sans MS";
+}
+
+/* Set form style*/
+.form{
+	background-color: #E7B1B1;
+	font-size: 15px; 
+	color: black;
+	border-radius: 5px;
+	padding: 20px;
+	border-bottom-style: solid;
+	border-top-style:solid;
+	border-width: 15px;
+	border-color: #CF6B6B; 
+	
+}
+
+/* Make the table in the middle of the page*/
+.table{
+	margin-left: auto;
+    margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+/* Set all input areas the same style*/
+.textarea{
+	background-color: #fdfbce;
+	padding: 8px;
+	margin: 8px;
+	font-family: "Times New Roman";
+	font-size: 15px;
+	border-radius: 8px;
+	border-color: gray;
+	border-width: 2px;
+	width: 500px;
+	height: 45px;
+}
+
+/* Set the style for redeem button*/
+.redeem{
+	background-color: #f4f3ef; 
+	color: black;
+	padding: 2px;
+	font-family: "Times New Roman";
+	font-size: 15px;
+	font-weight: 500;
+	border-radius: 5px;
+	border-color: gray;	
+}
+
+/* Set the style for submit button*/
+.submit{
+	background-color: #e1170f; 
+	color: #f4f3ef;
+	padding: 8px;
+	font-family: "Times New Roman";
+	font-size: 20px;
+	font-weight: 600;
+	border-radius: 8px;
+	border-color: gray;	
+	margin: 10px auto auto auto;
+}
+
+
+/*Make the table responsive*/
+
+@media screen and (max-width: 980px){
+	.textarea{
+		font-size: 14px;
+		width: 450px;
+		height: 42px;
+	}
+}
+
+@media screen and (max-width: 700px){
+	.textarea{
+		font-size: 12px;
+		width: 380px;
+		height: 40px;
+	}
+}
+
+@media screen and (max-width: 480px){
+	.textarea{
+		font-size: 9px;
+		width: 280px;
+		height: 30px;
+	}
+}
+
